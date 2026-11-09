@@ -1,0 +1,12 @@
+# Install with: python -m pip install -r requirements.txt
+# Direct dependency versions verified together with Python 3.12.
+numpy==2.5.4
+opencv-python==5.0.0.93
+torch==2.15.0
+torchvision==0.29.2
+Pillow==13.0.0
+matplotlib==3.11.2
+# ONNX export and verification
+onnx==1.23.2
+onnxscript==0.7.2
+onnxruntime==1.31.1
