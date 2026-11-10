@@ -52,7 +52,7 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual({targets[i] for i in training_set}, {0, 1})
             self.assertEqual({targets[i] for i in validation_set}, {0, 1})
 
-            checkpoint_path = train(config)
+            checkpoint_path = train(config, architecture="prokrastcnn", show_plots=False)
             checkpoint = torch.load(checkpoint_path, weights_only=True, map_location="cpu")
             self.assertEqual(checkpoint["class_names"], names)
             network = ProkrastCNN(len(names)).eval()
